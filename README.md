@@ -22,7 +22,7 @@ This is a solution to the API con Typescript Prisma project of the Make It Real 
 
 Vamos a construir una API usando express, typescript y prisma basados en el siguiente diagrama. 
 
-![Diagrama]("https://s3.amazonaws.com/makeitreal/images/classroom-prod/16913cae1f82b2ad0024ff93f06506ef.png")
+![Diagrama](https://s3.amazonaws.com/makeitreal/images/classroom-prod/16913cae1f82b2ad0024ff93f06506ef.png)
 
 Recuerden que debemos construir nuestro proyecto con todos lo lineamientos y buenas practicas que hemos visto hasta el dia de hoy.
 
