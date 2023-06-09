@@ -1,4 +1,4 @@
-import { Prisma, PrismaClient } from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
 
 import { users } from './user.types'
 
@@ -21,16 +21,6 @@ export async function getUserById(id: string) {
     return user
 }
 
-export async function getUserByEmail(email: string) {
-    const user = await prisma.users.findUnique({
-        where: {
-            email,
-        },
-    })
-
-    return user
-}
-
 export async function createUser(data: users) {
     const user = await prisma.users.create({
         data,
@@ -39,12 +29,14 @@ export async function createUser(data: users) {
     return user
 }
 
-export async function updateUser(data: users) {
+export async function updateUser(id: string, data: users) {
     const user = await prisma.users.update({
         where: {
-            id: data.id,
+            id,
         },
-        data,
+        data: {
+            ...data
+        }
     })
 
     return user
